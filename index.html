@@ -499,9 +499,9 @@ const CONFIG = {
       keywords: ['脱炭素','カーボンニュートラル','GX','グリーントランスフォーメーション','再生可能エネルギー','太陽光','省エネ','CO2','温室効果ガス','排出量','エネルギー','蓄電池','バイオマス','水素','アンモニア','カーボン','サステナブル','SDGs','ESG','気候変動','パリ協定','Scope','排出削減','クリーン','ネットゼロ','グリーン'],
     },
     {
-      id: 'ai_dx', label: 'AI・DX・スマート工場', icon: '🤖',
+      id: 'ai_dx', label: 'AI・DX・セキュリティ', icon: '🤖',
       color: '#8b5cf6', colorBg: 'rgba(139, 92, 246, 0.08)',
-      keywords: ['AI','人工知能','生成AI','DX','デジタル','スマート','IoT','ロボット','自動化','データ','クラウド','サイバー','セキュリティ','デジタルトランスフォーメーション','5G','半導体','ビッグデータ','機械学習','ディープラーニング','Society 5.0','Society5.0','RPA'],
+      keywords: ['AI','人工知能','生成AI','DX','デジタル','スマート','IoT','ロボット','自動化','データ','クラウド','デジタルトランスフォーメーション','5G','半導体','ビッグデータ','機械学習','ディープラーニング','Society 5.0','Society5.0','RPA','サイバー','セキュリティ','ランサムウェア','マルウェア','不正アクセス','情報漏洩','脆弱性','インシデント','フィッシング','OTセキュリティ','制御システム','CSIRT','SOC','ゼロトラスト','エンドポイント','NISC','JPCERT','IPA','重要インフラ','サイバー攻撃','個人情報保護','情報セキュリティ'],
     },
     {
       id: 'trade', label: '貿易・物流', icon: '🚢',
@@ -574,38 +574,43 @@ function getCategoryInfo(catId) {
 // ================================================================
 const DEMO_HEADLINES = {
   maff: [
-    { t: '令和7年産大豆の需給見通しについて', u: 'https://www.maff.go.jp/j/press/nousan/daizu.html' },
-    { t: '食用植物油脂の品質表示基準の一部改正について', u: 'https://www.maff.go.jp/j/press/syouan/hyoji.html' },
-    { t: '輸入小麦の政府売渡価格の改定について', u: 'https://www.maff.go.jp/j/press/nousan/boeki.html' },
-    { t: '「食品ロス削減推進法」に基づく基本方針の変更について', u: 'https://www.maff.go.jp/j/press/shokusan/kankyoi.html' },
-    { t: '令和7年度 食料・農業・農村白書の公表について', u: 'https://www.maff.go.jp/j/press/kanbo/anpo.html' },
-    { t: '国産菜種の生産振興に向けた取組方針の策定について', u: 'https://www.maff.go.jp/j/press/nousan/natane.html' },
-    { t: '鳥インフルエンザに関する情報について（国内15例目）', u: 'https://www.maff.go.jp/j/press/syouan/douei.html' },
-    { t: '農林水産分野におけるAI活用ガイドラインの策定', u: 'https://www.maff.go.jp/j/press/kanbo/joho.html' },
-    { t: '食品表示法に基づく栄養成分表示の義務化範囲の見直し', u: 'https://www.maff.go.jp/j/press/syouan/hyoji.html' },
-    { t: '穀物の国際相場動向と国内食料安定供給への影響について', u: 'https://www.maff.go.jp/j/press/kanbo/anpo.html' },
-    { t: 'パーム油の持続可能な調達に関する官民協議会の開催', u: 'https://www.maff.go.jp/j/press/shokusan/sdgs.html' },
-    { t: '米油の需要拡大に向けた新たな施策パッケージ', u: 'https://www.maff.go.jp/j/press/nousan/kome.html' },
-    { t: '令和7年度「みどりの食料システム戦略」推進事業の公募', u: 'https://www.maff.go.jp/j/press/kanbo/kankyo.html' },
-    { t: '食品製造業のHACCP導入支援に関する新制度について', u: 'https://www.maff.go.jp/j/press/syouan/seizo.html' },
-    { t: 'トランス脂肪酸低減に関する食品事業者向けガイダンス', u: 'https://www.maff.go.jp/j/press/syouan/seisaku.html' },
+    { t: '令和7年産大豆の需給見通しについて', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '食用植物油脂の品質表示基準の一部改正について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '輸入小麦の政府売渡価格の改定について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '「食品ロス削減推進法」に基づく基本方針の変更について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '令和7年度 食料・農業・農村白書の公表について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '国産菜種の生産振興に向けた取組方針の策定について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '鳥インフルエンザに関する情報について（国内15例目）', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '農林水産分野におけるAI活用ガイドラインの策定', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '食品表示法に基づく栄養成分表示の義務化範囲の見直し', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '穀物の国際相場動向と国内食料安定供給への影響について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: 'パーム油の持続可能な調達に関する官民協議会の開催', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '米油の需要拡大に向けた新たな施策パッケージ', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '令和7年度「みどりの食料システム戦略」推進事業の公募', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '食品製造業のHACCP導入支援に関する新制度について', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: 'トランス脂肪酸低減に関する食品事業者向けガイダンス', u: 'https://www.maff.go.jp/j/press/index.html' },
+    { t: '食品製造業における情報セキュリティ対策ガイドラインの改定', u: 'https://www.maff.go.jp/j/press/index.html' },
   ],
   meti: [
-    { t: 'GX推進法に基づくカーボンプライシング制度の詳細設計', u: 'https://www.meti.go.jp/press/gx.html' },
-    { t: '製造業DX推進に関する調査報告書の公表', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: '半導体・デジタル産業戦略のアップデートについて', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: 'AI事業者ガイドライン第2版の策定について', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: 'サプライチェーン強靭化に向けた支援策の拡充', u: 'https://www.meti.go.jp/press/economy.html' },
-    { t: '省エネルギー技術戦略2025の策定について', u: 'https://www.meti.go.jp/press/enepro.html' },
-    { t: '中小製造業のスマートファクトリー化支援事業の公募開始', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: 'エネルギー基本計画の見直しに関するパブリックコメント', u: 'https://www.meti.go.jp/press/enepro.html' },
-    { t: 'デジタルライフライン全国総合整備計画のフォローアップ', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: 'バイオマス由来プラスチック製品のJIS規格策定', u: 'https://www.meti.go.jp/press/economy.html' },
-    { t: '蓄電池産業戦略のアップデート版を公表しました', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: '生成AIの利活用に関する産業界向けガイドライン', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
-    { t: '水素基本戦略改定版に基づく実行計画の公表', u: 'https://www.meti.go.jp/press/enepro.html' },
-    { t: 'グリーントランスフォーメーション推進機構の設立', u: 'https://www.meti.go.jp/press/gx.html' },
-    { t: '製造業におけるIoT/AI導入事例集2025の公表', u: 'https://www.meti.go.jp/press/mono_info_service.html' },
+    { t: 'GX推進法に基づくカーボンプライシング制度の詳細設計', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '製造業DX推進に関する調査報告書の公表', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '半導体・デジタル産業戦略のアップデートについて', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'AI事業者ガイドライン第2版の策定について', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'サプライチェーン強靭化に向けた支援策の拡充', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '省エネルギー技術戦略2025の策定について', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '中小製造業のスマートファクトリー化支援事業の公募開始', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'エネルギー基本計画の見直しに関するパブリックコメント', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'デジタルライフライン全国総合整備計画のフォローアップ', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'バイオマス由来プラスチック製品のJIS規格策定', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '蓄電池産業戦略のアップデート版を公表しました', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '生成AIの利活用に関する産業界向けガイドライン', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '水素基本戦略改定版に基づく実行計画の公表', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'グリーントランスフォーメーション推進機構の設立', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '製造業におけるIoT/AI導入事例集2025の公表', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '工場システムにおけるサイバーセキュリティ対策ガイドライン改訂版の公表', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'ランサムウェア被害の実態と製造業における対策の強化について', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: 'OTセキュリティに関する産業界向け実務指針の策定', u: 'https://www.meti.go.jp/press/index.html' },
+    { t: '重要インフラのサイバー攻撃対策に関する行動計画の改定', u: 'https://www.meti.go.jp/press/index.html' },
   ],
   mhlw: [
     { t: '食品衛生法施行規則の一部改正に関する省令案について', u: 'https://www.mhlw.go.jp/stf/houdou/index.html' },
@@ -638,6 +643,8 @@ const DEMO_HEADLINES = {
     { t: 'データ戦略推進ワーキンググループ（第12回）の開催', u: 'https://www.digital.go.jp/news' },
     { t: 'AI安全性評価フレームワークの策定について', u: 'https://www.digital.go.jp/news' },
     { t: 'デジタル田園都市国家構想の進捗と今後の方向性', u: 'https://www.digital.go.jp/news' },
+    { t: '政府機関等のサイバーセキュリティ対策のための統一基準群の改定', u: 'https://www.digital.go.jp/news' },
+    { t: 'ゼロトラストアーキテクチャに基づく政府情報システムの設計指針', u: 'https://www.digital.go.jp/news' },
   ],
   mlit: [
     { t: '港湾における脱炭素化推進計画（CNP）の認定について', u: 'https://www.mlit.go.jp/report/press/index.html' },
@@ -655,6 +662,7 @@ const DEMO_HEADLINES = {
     { t: '規制改革推進会議における製造業関連の答申について', u: 'https://www.cao.go.jp/' },
     { t: 'AI戦略会議（第10回）の開催について', u: 'https://www.cao.go.jp/' },
     { t: '食品安全委員会 リスクコミュニケーション報告書', u: 'https://www.cao.go.jp/' },
+    { t: 'NISCによる重要インフラ防護に関する年次報告の公表', u: 'https://www.cao.go.jp/' },
   ],
 };
 
@@ -896,7 +904,24 @@ async function fetchRSSFeeds() {
       xml.querySelectorAll('item').forEach((item, idx) => {
         const title = (item.querySelector('title')?.textContent || '').trim();
         if (!title) return;
-        const link = item.querySelector('link')?.textContent?.trim() || feed.homepage;
+        // RSSのlink取得: textContent, 次のテキストノード, guid等から柔軟に取得
+        let link = '';
+        const linkEl = item.querySelector('link');
+        if (linkEl) {
+          link = (linkEl.textContent || '').trim();
+          // 一部のRSSではlinkタグ直後のテキストノードにURLがある
+          if (!link && linkEl.nextSibling && linkEl.nextSibling.nodeType === 3) {
+            link = linkEl.nextSibling.textContent.trim();
+          }
+        }
+        if (!link) {
+          const guid = item.querySelector('guid');
+          if (guid && guid.textContent.startsWith('http')) {
+            link = guid.textContent.trim();
+          }
+        }
+        if (!link) link = feed.homepage;
+        
         const pubStr = item.querySelector('pubDate')?.textContent ||
                        item.querySelector('dc\\:date, date')?.textContent || '';
         const pubDate = pubStr ? new Date(pubStr) : new Date();
